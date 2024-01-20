@@ -20,6 +20,10 @@
   ],
   "author": "Pho Thin Maung",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phothinmg/jsblog.git"
+  },
   "dependencies": {
     "@types/polka": "^0.5.6",
     "chalk": "^5.3.0",
