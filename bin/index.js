@@ -11,9 +11,9 @@ const runCommand = command => {
     }
     return true;
 }
-const devCommand = 'node ./node_modules/jsblog/src/dev/index.js';
-const buildCommand = 'npx cross-env NODE_ENV=production node ./node_modules/jsblog/src/build/index.js';
-const startCommand = 'node ./node_modules/jsblog/src/start/index.js';
+const devCommand = 'node ./node_modules/jsblog/src/opt/dev/index.js';
+const buildCommand = 'npx cross-env NODE_ENV=production node ./node_modules/jsblog/src/opt/build/index.js';
+const startCommand = 'node ./node_modules/jsblog/src/opt/start/index.js';
 program.version('0.1.2');
 
 program
