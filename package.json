@@ -11,7 +11,7 @@
   "main": "src/index.js",
   "types": "./src/index.d.ts",
   "bin": {
-    "jsb": "./bin/index.js"
+    "jsb": "bin/index.js"
   },
   "type": "module",
   "keywords": [
