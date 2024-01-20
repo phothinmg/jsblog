@@ -2,6 +2,7 @@
 
 import {execSync} from 'child_process';
 import { program } from 'commander';
+import pkg from "../package.json";
 const runCommand = command => {
     try{
         execSync(`${command}`, {stdio: 'inherit'});
@@ -14,7 +15,7 @@ const runCommand = command => {
 const devCommand = 'node ./node_modules/jsblog/src/opt/dev/index.js';
 const buildCommand = 'npx cross-env NODE_ENV=production node ./node_modules/jsblog/src/opt/build/index.js';
 const startCommand = 'node ./node_modules/jsblog/src/opt/start/index.js';
-program.version('0.1.2');
+program.version = pkg.version;
 
 program
     .command('dev')
