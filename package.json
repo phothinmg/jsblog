@@ -43,5 +43,34 @@
     "@types/glob-parent": "^5.1.3",
     "@types/node": "^20.10.5",
     "typescript": "^5.3.3"
+  },
+  "siteData":{
+    "sitename": "JS-Blog",
+    "author": "PTM",
+    "description": "Blog Template",
+    "development":{
+      "serverPort": 5040,
+      "appDir": "app",
+      "outDir": "node_modules/.jsb"
+    },
+    "production":{
+      "appDir": "app",
+      "outDir": "dist"
+    },
+    "social":{
+      "facebook": "https://facebook.com/",
+      "twitter": "https://twitter.com/",
+      "github":"https://github.com/"
+    },
+    "navLinks": [
+      {
+        "link": "/pages/about",
+        "name": "About"
+      },
+      {
+        "link": "/pages/project",
+        "name": "Project"
+      }
+    ]
   }
 }

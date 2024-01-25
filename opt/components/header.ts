@@ -1,12 +1,13 @@
-import data from '../../jsb.config.js';
+import data from "../../package.json" assert { type: "json" };
 
-
-export default function Header (){
-    const html = /* html */`
+export default function Header() {
+  const html = /* html */ `
     <header style="margin-top: 15px;">
         <nav>
             <ul>
-                <li><a href="/"><button style="border:none; margin-top: 15px;font-size: large;">${data.sitename}</button></a></li>
+                <li><a href="/"><button style="border:none; margin-top: 15px;font-size: large;">${
+                  data.siteData.sitename
+                }</button></a></li>
                 <li class="float-right sticky">
                 <select id="theme" onchange="tc()" style="font-size: small;width:fit-content;margin-top: 18px;">
                     <option value=" ">Default</option>
@@ -21,13 +22,15 @@ export default function Header (){
                     <option value="tufte">Tufte</option>
                </select>
                </li>
-                    ${data.navLinks.map((link) => {
-                    return `<li class="float-right"><a href=${link.link}><button style="border:none; margin-top: 15px;">${link.name}</button></a></li>`
-                    }).join(' \n')}
+                    ${data.siteData.navLinks
+                      .map((link) => {
+                        return `<li class="float-right"><a href=${link.link}><button style="border:none; margin-top: 15px;">${link.name}</button></a></li>`;
+                      })
+                      .join(" \n")}
                 <li class="float-right"><a href="/posts"><button style="border:none; margin-top: 15px;">Blog</button></a></li>
             </ul>
         </nav>
     </header>
     `;
-    return html
+  return html;
 }

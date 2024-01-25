@@ -1,11 +1,16 @@
-
-import data from '../../jsb.config.js';
-export default function Footer (){
-    const html = /* html */`
+import data from "../../package.json" assert { type: "json" };
+export default function Footer() {
+  const html = /* html */ `
     <footer style="margin-bottom: 20px ;">
-        <small> ©  ${new Date().getFullYear() + ' ' + '  |  ' + ' ' + data.sitename}</small>
+        <small> ©  ${
+          new Date().getFullYear() +
+          " " +
+          "  |  " +
+          " " +
+          data.siteData.sitename
+        }</small>
         <small class="float-right sticky">
-            <a href="${data.facebook}" target="_blank">
+            <a href="${data.siteData.social.facebook}" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18px" height="18px">
                     <style>
                         path{
@@ -21,7 +26,7 @@ export default function Footer (){
             </a>
         </small>
         <small class="float-right " style="margin-right: 10px;" >
-            <a href="${data.twitter}" target="_blank">
+            <a href="${data.siteData.social.twitter}" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  width="18px" height="18px">
                     <style>
                         path{
@@ -37,7 +42,7 @@ export default function Footer (){
             </a>
         </small>
         <small class="float-right " style="margin-right: 10px;" >
-            <a href="${data.github}" target="_blank">
+            <a href="${data.siteData.social.github}" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"  width="18px" height="18px">
                     <style>
                         path{
@@ -54,5 +59,5 @@ export default function Footer (){
         </small>
     </footer>
     `;
-    return html
+  return html;
 }
